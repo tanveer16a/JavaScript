@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"> This paragraph as ID=demo is not used to print the array items </p>
+<br> 
+
+<script type="text/javascript">
+
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+    
+text = "<ol>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ol>";
+//document.getElementById("demo").innerHTML = text; 
+document.write(text);
+
+    //to check if fruits is an array or a variable 
+    document.writeln(Array.isArray(fruits));
+
+</script>
+
+    
+</body>
+</html>

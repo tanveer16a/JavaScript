@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"> This paragraph as ID=demo is not used to print the array items </p>
+<br> 
+
+<script type="text/javascript">
+
+    //to get the hours of the current time
+    
+    var hour= new Date().getHours();
+
+    
+if (hour < 12 && hour>5) {
+    greeting = "Good Morning";
+}
+else if (hour < 16 && hour >12) {
+    greeting = "Good evening";
+} else if (hour > 20) {
+    greeting = "Good night";
+} 
+else 
+{
+    greeting = "Sleep well";
+}
+    
+//to print greeting
+    document.getElementById("demo").innerHTML=greeting;
+    
+    //Or, use the following statement 
+
+    document.write(greeting);
+    
+
+</script>
+
+    
+</body>
+</html>

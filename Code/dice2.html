@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> JavaScript programming </h1>
+
+<script>
+
+
+//preload the six images first
+var face0=new Image()
+face0.src="imgs/1.jpg"
+var face1=new Image()
+face1.src="imgs/2.jpg"
+var face2=new Image()
+face2.src="imgs/3.jpg"
+var face3=new Image()
+face3.src="imgs/4.jpg"
+var face4=new Image()
+face4.src="imgs/5.jpg"
+var face5=new Image()
+face5.src="imgs/6.jpg"
+</script>
+
+
+<img src="imgs/1.jpg" name="mydice">
+    
+<form>
+<input type="button" value="Throw dice!" onClick="throwdice()">
+</form>
+    
+<script>
+function throwdice(){
+//create a random integer between 0 and 5
+var randomdice=Math.round(Math.random()*5)
+document.images["mydice"].src=eval("face"+randomdice+".src")
+}
+</script>
+
+    
+</body>
+</html>

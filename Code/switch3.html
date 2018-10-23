@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body onload="changeImage()">
+
+<h1> JavaScript programming </h1>
+
+        <img src="imgs/1.jpg" id="diceImage">
+
+<script>
+
+var switchValue = Math.ceil((Math.random()*6));
+    
+switch (switchValue) {
+
+            case 1:
+
+                changeImage();
+                break;
+            case 2:
+
+                changeImage();
+                break;
+            case 3:
+
+                changeImage();
+                break;
+            case 4:
+
+                changeImage();
+                break;
+            case 5:
+
+                changeImage();
+                break;
+            case 6:
+
+                changeImage();
+                break;
+
+            default:
+
+            document.getElementById("diceImage").setAttribute("src", "");
+            document.write("Wrong number, please try again");
+            break;
+        }
+
+
+        function changeImage() { //Change image to match dice rolled 
+            document.getElementById("diceImage").setAttribute("src", "imgs/" + eval(switchValue) + ".jpg");
+            document.write("You rolled " + switchValue);
+        }
+</script>
+
+    
+</body>
+</html>

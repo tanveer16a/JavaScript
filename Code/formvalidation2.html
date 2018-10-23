@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="header"> JavaScript programming </h1>
+    
+
+<form method="post" action="something.php" name="contact" onsubmit="return validateform()">
+    number: <input type="number" name="number">
+    
+    <label> full name </label>
+    <input type="text" name="fullname">
+    <br>
+    <label> Email </label>
+    <input type="text" name="email">
+    <br> 
+    <label> Phone </label>
+    <input type="text" name="phone">
+    <br>
+    <input type="submit" value="Submit">
+</form> 
+
+    
+<script type="text/javascript">
+    function validateform()
+    {
+        var fullname = document.forms["contact"]["fullname"].value;
+        //To check if the field is empty, a message will pop-up
+        if(fullname==null || fullname=="")        
+            {
+                alert("Name is required");
+                return false;
+                
+            }
+        
+           //To check if the field has less than 3 characters, a message will pop-up
+         if(fullname.length < 3 || fullname.length > 35)        
+            {
+                alert("Name should not be less than 3 characters and more than 35 characters");
+                return false;
+                
+            }
+    }
+
+</script>
+    
+</body>
+</html>

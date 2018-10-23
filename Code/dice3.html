@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body onload="throwdice()">
+
+<h1> JavaScript programming </h1>
+
+    
+<script>
+//preload the six images first
+var face1=new Image();
+face1.src="imgs/1.jpg";
+var face2=new Image();
+face2.src="imgs/2.jpg"
+var face3=new Image();
+face3.src="imgs/3.jpg";
+var face4=new Image();
+face4.src="imgs/4.jpg";
+var face5=new Image();
+face5.src="imgs/5.jpg";
+var face6=new Image();
+face6.src="imgs/6.jpg";
+</script>
+
+<img src="imgs/1.jpg" name="mydice">
+    
+<script type="text/javascript">
+
+x = Math.ceil(Math.random()*6);
+//var x=Math.round(Math.random()*5)
+
+
+    switch( x )
+    {
+        case 1:
+            document.write("<br> your rolled  "+x);
+            break;
+        case 2:
+            document.write("<br> your rolled  "+x);
+            break;
+        case 3:
+            document.write("<br> your rolled  "+x);
+            break;
+        case 4:
+            document.write("<br> your rolled  "+x);
+            break;
+        case 5:
+            document.write("<br> your rolled  "+x);
+            break;
+        case 6:
+            document.write("<br> your rolled  "+x);
+            break;
+        default:
+            console.write("<br> Wrong number, please try again!");
+    }
+    
+ function throwdice(){
+//create a random integer between 0 and 5
+document.images["mydice"].src=eval("face"+x+".src")
+}
+
+</script>
+
+    
+</body>
+</html>

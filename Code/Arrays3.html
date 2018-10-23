@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> JavaScript programming </h1>
+    
+<script type="text/javascript">
+//var cars=["BMW", "Toyota", "VW", "Honda", "Nissan"];
+var cars=new Array("BMW", "Toyota","Honda", "Nissan");
+
+    cars.push("Bently");
+    cars[cars.length]="Renault";
+    
+    list=cars.sort();
+    list.reverse();
+    
+    function listofcars()
+    {
+    for(var i=0; i<list.length; i++)
+        {
+          //console.log(cars[i]);
+         document.write(list[i]+"<br>");
+
+        }
+    }
+    
+    listofcars;
+
+    
+</script>
+    
+</body>
+</html>

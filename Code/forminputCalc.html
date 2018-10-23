@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> JavaScript programming </h1>
+
+<form  name="calcf" onsubmit="return validateform()">
+    X: <input type="text" name="x" id="x"> <br>
+    Y: <input type="text" name="y" id="y"> <br>
+    
+    <input type="submit" value="Submit" onsubmit="calc()"> <br>
+
+</form>
+
+<br> 
+
+		
+       
+<script type="text/javascript">
+
+      function validateform()
+    {
+        var x1 = document.forms["calcf"]["x"].value;
+        if(x1==null || x1=="" || isNaN(x1))
+            {
+            alert("X box is empty or has a non number character ");
+                return false; 
+            
+          }
+        
+    }
+    </script>
+
+    
+<button onclick="calc()"> calc </button>
+
+    <script> 
+
+    function calc()
+    {
+        var x,y; 
+        x=parseInt(document.getElementById("x").value);
+        y=parseInt(document.getElementById("y").value);
+		var a= "Multiplication " + eval("x*y") + "<br>";
+		var b= "Addition " + eval("x+y") + "<br>";
+		var c= "Division " + eval("x/y") + "<br>";
+    
+		var result = a + b + c;
+		document.getElementById("demo").innerHTML = result;
+	}
+
+</script>
+
+		<p id="demo">  </p>
+ 
+</body>
+</html>

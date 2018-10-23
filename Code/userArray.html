@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> JavaScript programming </h1>
+    
+
+    
+<script type="text/javascript">
+    var numbers = [];
+    var repeat, sum;
+    sum=0;
+    
+    do{
+    numbers.push(prompt("please enter a number"));
+    repeat=prompt("Do you want to add more numbers? n/y");
+    //sum+=parseInt(numbers);     
+    } while(repeat!='n')
+        
+   document.write("Array elements are: "+numbers+"<br>");
+    
+    for(var i=0; i<numbers.length; i++)
+        {
+            sum+=parseInt(numbers[i]);
+        }
+   document.write("the sum all items in the array:" + sum+"<br>");
+
+        
+</script>
+
+    
+</body>
+</html>
